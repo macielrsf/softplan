@@ -110,7 +110,7 @@ class Task extends Component {
                                 {item.title}
                             </AText>
                             <AText style={styles.owner}>
-                                Responsável: {owner}
+                                Responsável: {owner.name}
                             </AText>
                     </View>
                 </TouchableOpacity>

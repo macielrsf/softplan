@@ -65,11 +65,11 @@ class Tasks extends Component {
     }
 
     _getOwner(item) {
-        let owner = '';
+        let owner = null;
 
         this.props.users.map(user => {
             if ( item.userId === user.id ) {
-                owner = user.name;
+                owner = user;
             }
         });
 
