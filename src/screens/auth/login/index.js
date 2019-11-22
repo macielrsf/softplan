@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
     View,
     Button,
-    Text
+    Text,
+    Image
 } from 'react-native';
 import { connect } from 'react-redux';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -40,29 +41,23 @@ class Login extends Component {
             <AContainer form={true}>
                 <View style={styles.header}>
                     <Text style={styles.title}>
-                        Login
+                        TAREFA FÁCIL
                     </Text>
                 </View>
                 <View style={styles.content}>
+                    <Image 
+                        style={styles.image}
+                        source={require('~/assets/todo.png')}
+                        resizeMode="contain"
+                    />
                     <View style={styles.input}>
                         <AInput 
-                            placeholder="Usuário" 
+                            placeholder="Nome" 
                             textContentType="emailAddress"
                             autoCapitalize="none"
-                            onSubmitEditing={() => this.password.getRef().focus()}
                             returnKeyType="next"
                             onChangeText={text => this.props.changeUser(text)}
                             value={this.props.user}
-                        />
-                    </View>
-                    <View>
-                        <AInput 
-                            ref={(r) => this.password = r}
-                            placeholder="Senha" 
-                            secureTextEntry
-                            onSubmitEditing={this._login}
-                            onChangeText={text => this.props.changePassword(text)}
-                            value={this.props.password}
                         />
                     </View>
                     <View style={styles.button}>

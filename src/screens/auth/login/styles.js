@@ -1,12 +1,20 @@
 import {
-    StyleSheet
+    StyleSheet,
+    Dimensions
 } from 'react-native';
+
+import {
+    bgColor
+} from '~/helpers/theme';
+
+const { width } = Dimensions.get('window');
 
 export default StyleSheet.create({
     content: {
         alignItems: 'center',
-        justifyContent: 'center',
-        flex: 0
+        justifyContent: 'flex-end',
+        paddingBottom: 50,
+        flex: 1
     },
     input: {
         paddingBottom: 15
@@ -15,14 +23,17 @@ export default StyleSheet.create({
         paddingTop: 40
     },
     header: {
-        alignItems: 'flex-start',
-        justifyContent: 'flex-end',
-        padding: 35,
-        flex: 0.5
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        paddingTop: 50,
+        flex: 1
     },
     title: {
         fontSize: 28,
         fontWeight: 'bold',
-        color: '#485357'
+        color: 'grey'
+    },
+    image: {
+        width: width / 1.2
     }
 });

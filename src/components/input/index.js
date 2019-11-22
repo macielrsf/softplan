@@ -12,15 +12,12 @@ const { width, height } = Dimensions.get('window');
 
 const styles = StyleSheet.create({
     box: {
-        borderRadius: 8,
-        borderWidth: 1.5,
-        borderColor: bgColor,
-        height: 50,
+        borderBottomWidth: 1.5,
+        borderBottomColor: bgColor,
+        height: 40,
         width: width - 70
     },
     input: {
-        paddingLeft: 15,
-        borderRadius: 5,
         flex: 1
     }
 });

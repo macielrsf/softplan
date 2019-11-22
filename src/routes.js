@@ -14,9 +14,10 @@ const AuthStack = createStackNavigator({
 });
 
 const AppStack = createStackNavigator({
-    Cases: {  screen: Screens.Cases }
+    Tasks: {  screen: Screens.Tasks },
+    TaskOwner: {  screen: Screens.TaskOwner }
 }, {
-    initialRouteName: 'Cases'
+    initialRouteName: 'Tasks'
 });
 
 export const AppContainer = createAppContainer(

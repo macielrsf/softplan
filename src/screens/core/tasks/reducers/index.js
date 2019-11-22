@@ -2,7 +2,8 @@ import * as types from '../constants';
 
 const INITIAL_STATE = {
     loading: false,
-    cases: []
+    tasks: [],
+    users: []
 }
 
 export default (state = INITIAL_STATE, action) => {
@@ -13,10 +14,16 @@ export default (state = INITIAL_STATE, action) => {
                 loading: action.payload
             }
         }
-        case types.CASES_LOADED: {
+        case types.TASKS_LOADED: {
             return {
                 ...state,
-                cases: action.payload
+                tasks: action.payload
+            }
+        }
+        case types.USERS_LOADED: {
+            return {
+                ...state,
+                users: action.payload
             }
         }
         default:

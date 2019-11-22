@@ -4,7 +4,7 @@ import { persistStore, persistReducer } from 'redux-persist';
 import AsyncStorage from '@react-native-community/async-storage';
 
 import LoginReducer from '~/screens/auth/login/reducers';
-import CasesReducer from '~/screens/core/cases/reducers';
+import TasksReducer from '~/screens/core/tasks/reducers';
 
 const loginPersistConfig = {
     key: 'login',
@@ -17,7 +17,7 @@ const rootReducer = combineReducers({
         loginPersistConfig,
         LoginReducer
     ),
-    CasesReducer
+    TasksReducer
 });
 
 export default () => {
