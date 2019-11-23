@@ -66,8 +66,8 @@ const styles = StyleSheet.create({
 
 class Task extends Component {
     _gotoTaskOwner = () => {
-        const { item } = this.props;
-        this.props.navigation.navigate('TaskOwner', { item });
+        const { item, owner } = this.props;
+        this.props.navigation.navigate('TaskOwner', { item, owner });
     }
 
     _renderIcon() {

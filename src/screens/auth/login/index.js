@@ -36,6 +36,25 @@ class Login extends Component {
         }
     }
 
+    _checkLogin() {
+        try {
+            if ( this.props.user && this.props.user.length > 0 ) {
+                if ( /[A-Z]/.test(this.props.user[0]) ) {
+                    return true;
+                }
+
+                return false;
+            } 
+
+            return true;
+        }
+        catch(e) {
+            console.warn(e);
+        }
+
+        return true;
+    }
+
     render() {
         return (
             <AContainer form={true}>
@@ -61,7 +80,9 @@ class Login extends Component {
                         />
                     </View>
                     <View style={styles.button}>
-                        <AButton onPress={this._login}>
+                        <AButton 
+                            disabled={this._checkLogin()}
+                            onPress={this._login}>
                             ENTRAR
                         </AButton>
                     </View>

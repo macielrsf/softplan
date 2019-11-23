@@ -39,11 +39,6 @@ export const load = () => {
 
 const loadUsers = () => {
     return dispatch => {
-        dispatch({
-            type: types.LOADING,
-            payload: true
-        });
-
         let url = `${http.defaults.baseURL}users`;
 
         http.get(url)
